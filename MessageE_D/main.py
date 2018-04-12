@@ -106,6 +106,7 @@ def the_program():
                 execute = False
         program_running = False
     again()
+
 # Asks the user if they want to encrypt more
 def again():
     yes = {'yes','y', 'ye', ''}
@@ -123,6 +124,7 @@ def again():
         sys.stdout.write("Please respond with 'yes' or 'no'")
         clear_screen()
         again()
+        
 # Allows us to import without executing
 if __name__ == '__main__':
     start()
