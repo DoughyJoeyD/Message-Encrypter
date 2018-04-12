@@ -4,6 +4,10 @@ import re
 
 
 class Polybius(Cipher):
+    """
+    This is the Polybius Cipher. You can encrypt/decrypt any message you
+    would like by using the .encypt and .decrypt tags!
+    """
     def __init__(self):
         self.utilities = Utilities()
 

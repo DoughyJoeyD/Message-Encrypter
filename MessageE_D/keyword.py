@@ -4,6 +4,10 @@ import string
 
 
 class KeyWord(Cipher):
+    """
+    The KeyWord Cipher class can encrypt or decrypt a message given a
+    chosen keyword, hence the name. This is the class for said cipher
+    """
     def __init__(self):
         self.utilities = Utilities()
 

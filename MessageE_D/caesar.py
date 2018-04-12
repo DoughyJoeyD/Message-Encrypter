@@ -4,6 +4,8 @@ from ciphers import Cipher
 
 
 class Caesar(Cipher):
+    """Adding a Docstring To Explain that this is the class for the
+    Caesar Cipher"""
     FORWARD = string.ascii_uppercase * 3
 
     def __init__(self, offset=3):
