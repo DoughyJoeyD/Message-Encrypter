@@ -2,7 +2,7 @@ import os
 import sys
 import time
 import caesar
-import keyword
+import keywordcip
 import atbash
 import polybius
 import utilities
@@ -57,7 +57,7 @@ def the_program():
         print("Pick a Cipher by choosing a number!\n"
               "Enter 0 to quit.\n")
 
-        user_input = input("Enter Number: ")
+        user_input = int(input("Enter Number: "))
 
         if user_input == 0:
             break
@@ -77,18 +77,17 @@ def the_program():
                 time.sleep(3)
                 clear_screen()
                 print("Encrypt=1 - Decrypt=2")
-                time.sleep(2)
-                encdec = input()
+                encdec = int(input("- "))
                 clear_screen()
                 action = options[encdec]
                 print("--Enter Your Message--")
-                text_to_use = str.upper(raw_input(selected_cipher + "-" + options[encdec]+ ": "))
+                text_to_use = str.upper(input("Message: "))
 
                 if selected_cipher.upper() == "CAESAR":
                     instance = caesar.Caesar()
                 elif selected_cipher.upper() == "KEYWORD":
-                    instance = keyword.KeyWord()
-                    cipher_keyword = str.upper(raw_input("Enter Keyword: "))
+                    instance = keywordcip.KeyWord()
+                    cipher_keyword = str.upper(input("Enter Keyword: "))
                     text_to_use = [text_to_use, cipher_keyword]
                 elif selected_cipher.upper() == "ATBASH":
                     instance = atbash.AtBash()
@@ -101,7 +100,7 @@ def the_program():
                     print(instance.encrypt(text_to_use))
                 else:
                     print(instance.decrypt(text_to_use))
-                programPause = raw_input("Press the <ENTER> key to continue...")
+                programPause = input("Press the <ENTER> key to continue...")
                 clear_screen()
                 execute = False
         program_running = False
@@ -112,7 +111,7 @@ def again():
     yes = {'yes','y', 'ye', ''}
     no = {'no','n'}
     print("Encrypt/Decrypt More?: ")
-    choice = raw_input("Enter Yes or No: ").lower()
+    choice = input("Enter Yes or No: ").lower()
     if choice in yes:
         clear_screen()
         the_program()
@@ -124,7 +123,7 @@ def again():
         sys.stdout.write("Please respond with 'yes' or 'no'")
         clear_screen()
         again()
-        
+
 # Allows us to import without executing
 if __name__ == '__main__':
     start()
