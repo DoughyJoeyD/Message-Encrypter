@@ -2,7 +2,7 @@ import string
 class Utilities():
     """ Used throught the ciphers to aid in the process """
 # Creates Alphabet when called all uppercase to look nice
-    def key_word_help(self, type=None):
+    def keyword_help(self, type=None):
         if type is None or type == "string":
             alpha = string.ascii_uppercase
         elif type == "list":
@@ -18,7 +18,7 @@ class Utilities():
 
         return letters
 
-# Polybius needs a table to encrypt, this creates that table        
+# Polybius needs a table to encrypt, this creates that table
     def poly_help(self):
         alpha = self.key_word_help()
         x = 1

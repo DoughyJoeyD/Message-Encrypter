@@ -14,8 +14,8 @@ class KeyWord(Cipher):
 
     def __key(self, keyword, action):
         encryption_key = {}
-        plain = self.utilities.key_word_help("list")
-        ciphertext = self.utilities.key_word_help("list")
+        plain = self.utilities.keyword_help("list")
+        ciphertext = self.utilities.keyword_help("list")
         keyword_stripped = self.utilities.dont_repeat(keyword)
         for i in range(len(keyword_stripped)):
             ciphertext.remove(keyword_stripped[i])

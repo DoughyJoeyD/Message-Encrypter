@@ -26,7 +26,7 @@ class Polybius(Cipher):
         return ''.join(output)
 
     def decrypt(self, message):
-        polybius = self.helpers.polybius_square()
+        polybius = self.utilities.polybius_square()
         output = []
         convert_spaces = re.sub("[ ]", "::", message)
         n = 2

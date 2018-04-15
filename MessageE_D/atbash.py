@@ -14,8 +14,8 @@ class AtBash(Cipher):
 #The Encryption Function
     def encrypt(self, text):
         key1 = {}
-        alphab = self.utilities.key_word_help()
-        backalphab = self.utilities.key_word_help()[::-1]
+        alphab = self.utilities.keyword_help()
+        backalphab = self.utilities.keyword_help()[::-1]
         message_atbash = []
 
         for x in range(len(alphab)):
