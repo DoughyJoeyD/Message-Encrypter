@@ -20,7 +20,7 @@ class Utilities():
 
 # Polybius needs a table to encrypt, this creates that table
     def poly_help(self):
-        alpha = self.key_word_help()
+        alpha = self.keyword_help()
         x = 1
         y = 1
         polybius = {}
